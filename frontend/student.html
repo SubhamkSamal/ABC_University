@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Portal | ABC University</title>
+
+    <link rel="stylesheet" href="student.css">
+    <script src="student.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">ABC <span>University</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#academics">Academics</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow">ABC UNIVERSITY · FACULTY ACCESS</p>
+            <h1>Teacher Portal</h1>
+            <p>Sign in with your Teacher ID to access student records.</p>
+        </section>
+
+        <section class="login-section">
+            <div class="login-card" id="login-card">
+                <div class="icon-circle">T</div>
+
+                <h2>Teacher Login</h2>
+                <p class="muted">
+                    Enter your registered Teacher ID to continue.
+                </p>
+
+                <form id="teacher-form">
+                    <label for="teacher-id">Teacher ID</label>
+
+                    <input
+                        type="text"
+                        id="teacher-id"
+                        name="teacher-id"
+                        placeholder="Enter your Teacher ID"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="login-button">
+                        Access Student Records
+                    </button>
+                </form>
+
+                <p id="login-message" class="message" role="status"
+                   aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- Hidden until a valid teacher ID is entered -->
+        <section id="student-dashboard" class="dashboard" hidden>
+            <div class="welcome-panel">
+                <div>
+                    <p class="eyebrow">FACULTY DASHBOARD</p>
+                    <h2 id="welcome-heading">Welcome!</h2>
+                    <p class="muted">
+                        Here are the student records available to you.
+                    </p>
+                </div>
+
+                <button type="button" id="logout-button" class="secondary-button">
+                    Log Out
+                </button>
+            </div>
+
+            <div class="table-heading">
+                <div>
+                    <h2>Student Directory</h2>
+                    <p class="muted">Student information from the university database.</p>
+                </div>
+
+                <span class="count-badge">
+                    <span id="student-count">0</span> Students
+                </span>
+            </div>
+
+            <div class="table-card">
+                <div class="table-toolbar">
+                    <label for="student-search">Search students</label>
+                    <input
+                        type="search"
+                        id="student-search"
+                        placeholder="Search by name, ID, department..."
+                    >
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="student-table">
+                            <!-- JavaScript inserts student rows here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <p id="table-message" class="table-message" role="status"
+                   aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 ABC University. All rights reserved.</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+
+</body>
+</html>

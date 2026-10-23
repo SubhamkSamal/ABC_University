@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Directory | ABC University</title>
+
+    <link rel="stylesheet" href="course.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">A</span>
+            <span>ABC <strong>University</strong></span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="index.html#portals" class="back-button">
+            ← University Portals
+        </a>
+    </header>
+
+
+    <main>
+
+        <section class="page-hero">
+            <p class="eyebrow">ABC UNIVERSITY / ACADEMICS</p>
+
+            <h1>Explore our <span>courses.</span></h1>
+
+            <p class="hero-description">
+                Discover the courses offered at ABC University.
+                Explore course details, departments, credit requirements,
+                and instructors all in one place.
+            </p>
+
+            <div class="hero-meta">
+                <span class="status-dot"></span>
+                Course directory
+                <span class="meta-divider">/</span>
+                Live database data
+            </div>
+        </section>
+
+
+        <section class="courses-section" id="courses">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">COURSE CATALOGUE</p>
+                    <h2>Available Courses</h2>
+                    <p class="section-description">
+                        Browse the academic offerings below.
+                    </p>
+                </div>
+
+                <div class="course-count">
+                    <span class="count-number" id="course-count">—</span>
+                    <span class="count-label">Courses found</span>
+                </div>
+            </div>
+
+
+            <div class="table-card">
+
+                <div class="table-toolbar">
+                    <div>
+                        <h3>Course Directory</h3>
+                        <p>Search by course, code, department, or instructor.</p>
+                    </div>
+
+                    <label class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input
+                            type="search"
+                            id="course-search"
+                            placeholder="Search courses..."
+                            aria-label="Search courses"
+                        >
+                    </label>
+                </div>
+
+
+                <p class="table-status" id="table-status" role="status">
+                    Loading courses from the university database...
+                </p>
+
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Course Code</th>
+                                <th scope="col">Course Name</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">Credits</th>
+                                <th scope="col">Instructor</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="course-table">
+                            <!-- JavaScript inserts course rows here -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <p class="data-note">
+                Course information is retrieved from the ABC University database.
+            </p>
+
+        </section>
+
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">LEARN. DISCOVER. ACHIEVE.</p>
+            <h2>Every course is a step forward.</h2>
+            <p>
+                Build your knowledge, explore new disciplines,
+                and take the next step in your academic journey.
+            </p>
+
+            <a href="index.html" class="home-link">
+                Return to Homepage →
+            </a>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <a href="index.html" class="footer-logo">
+            ABC <strong>University</strong>
+        </a>
+
+        <p>Knowledge. Character. Excellence.</p>
+
+        <p>© 2026 ABC University. Educational demonstration project.</p>
+    </footer>
+
+</body>
+</html>
